@@ -1,0 +1,254 @@
+/* RESET ----------------------------------------------------------------- */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    /* Removido height:100vh para permitir rolagem natural */
+    background:#000;
+    font-family:"Poppins",sans-serif;
+    color:#fff;              /* texto branco por padrão */
+}
+.interface{
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 4%;
+}
+.flex{display:flex;}
+
+/* HEADER ---------------------------------------------------------------- */
+header{
+    padding:40px 0;
+    position:relative;
+}
+header>.interface{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.logo img{height:50px;}
+
+/* Menu Desktop */
+.menu-desktop ul{
+    list-style:none;
+    display:flex;
+    gap:40px;
+}
+.menu-desktop a{
+    color:#828080;
+    text-decoration:none;
+    transition:.2s;
+}
+.menu-desktop a:hover{
+    color:#fff;
+    transform:scale(1.05);
+}
+
+/* Botão de Contato */
+.btn-contato button{
+    padding:10px 40px;
+    font-size:25px;
+    font-family:"Poppins",sans-serif;
+    font-weight:600;
+    background:blue;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:box-shadow .3s ease,transform .3s;
+    box-shadow:0 0 5px #0303e6;
+    text-transform:uppercase;
+}
+.btn-contato button:hover{
+    box-shadow:0 0 8px #0303e6;
+    transform:scale(1.05);
+    background:#fff;
+}
+
+/* Ícone menu mobile */
+.menu-mobile-icon{
+    display:none;
+    font-size:32px;
+    color:#fff;
+    cursor:pointer;
+}
+
+/* Menu Mobile */
+.menu-mobile{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#111;
+    padding:20px 0;
+    text-align:center;
+}
+.menu-mobile ul{list-style:none;flex-direction:column;}
+.menu-mobile ul li{margin:15px 0;}
+.menu-mobile a{
+    color:#828080;
+    text-decoration:none;
+    font-size:25px;
+    transition:.2s;
+}
+.menu-mobile a:hover{color:#fff;}
+.menu-mobile.open{display:block;}
+
+/* Responsivo */
+@media(max-width:768px){
+    .menu-desktop,.btn-contato{display:none;}
+    .menu-mobile-icon{display:block;}
+}
+
+/* TOPO DO SITE ---------------------------------------------------------- */
+section.topo-do-site{padding:40px 4%;}
+section.topo-do-site .flex{
+    align-items:center;
+    justify-content:center;
+    gap:90px;
+}
+.topo-do-site h1{
+    font-size:28px;
+    line-height:40px;
+}
+.topo-do-site h1 span{color:blue;font-size:30px;}
+.topo-do-site p{margin:40px 0;color:#fff;}
+.topo-do-site .img-topo-site img{
+    position:relative;
+    animation:flutuar 2s ease-in-out infinite alternate;
+}
+@keyframes flutuar{
+    0%{top:0;}
+    100%{top:30px;}
+}
+
+/* ESPECIALIDADES -------------------------------------------------------- */
+section.especialidades{
+    background:#101010;   /* distingue do fundo geral */
+    padding:80px 0;
+}
+.especialidades h2{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:60px;
+}
+.especialidades h2 span{color:blue;}
+.especialidades .flex{
+    flex-wrap:wrap;
+    gap:40px;
+    justify-content:center;
+}
+.especialidades-box{
+    background:#1a1a1a;
+    border-radius:12px;
+    padding:32px 40px;
+    min-width:260px;
+    box-shadow:0 0 12px rgba(0,0,0,.4);
+}
+.especialidades-box ul{list-style:none;}
+.especialidades-box li{
+    font-size:18px;
+    margin:14px 0;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.especialidades-box i{color:blue;font-size:22px;}
+
+
+/* PORTFÓLIO ------------------------------------------------------------ */
+section.portifolio{
+    padding:80px 4%;
+    box-shadow: 0 0 40px 10px #f6f4f441;
+    background:#101010;   /* mesma cor do topo */
+}
+section.portifolio h2{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:60px;
+}
+
+
+.portifolio h2 span{
+    color:blue;
+    font-size:60px;       /* destaque maior para o span */
+}
+
+.portifolio .flex{
+    flex-wrap:wrap;
+    gap:40px;
+    justify-content:center;
+}
+.portifolio a{
+    color:hsl(202, 78%, 60%);
+    text-decoration:none;
+    font-size:50px;
+    transition:.2s;
+}
+.portifolio a:hover{
+    color:#fff;
+    transform:scale(1.05);
+}
+
+/* rodape ---------------------------------------------------------------- */
+section.rodape{
+    background:#101010;
+    padding:40px 4%;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    box-shadow: 0 -10px 20px rgba(0,0,0,.5);
+}
+section.rodape p{
+    font-size:30px;
+    color:#fff;
+   margin-bottom:20px;
+   
+}
+section.rodape span{
+    color:blue;
+    font-size:30px;
+}
+section.rodape a{
+    font-size: 100px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.2s;
+   
+}
+
+ /* Botão Entre em Contato estilizado azul e futurista */
+ .section.rodape {
+    text-align: center;
+    background-color: #007bff; /* azul */
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    font-size: 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #007bff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .section.rodape:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #00bfff;
+  }
+section.rodape a:hover{
+    color:#fff;
+    text-decoration:underline;
+}
+   
+/* ANIMAÇÃO DO MENU MOBILE */
+.menu-mobile-icon{
+    display:block;
+}
+.menu-mobile-icon.open{
+    color:blue; /* cor azul quando aberto */
+}
+
